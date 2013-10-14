@@ -32,3 +32,4 @@ QXrdFile::QXrdFile(QObject *parent, const QString &path, QXrdFilePrivate &d) :
   QIODevice(parent), d_ptr(&d) {
 }
 
+QXrdFilePrivate::QXrdFilePrivate(QXrdFile* q) : q_ptr(q) { }

@@ -15,7 +15,7 @@
 #include "QXrdFile.h"
 class QXrdFilePrivate {
 public:
-  QXrdFilePrivate(QXrdFile *q) : q_ptr(q) { }
+  QXrdFilePrivate(QXrdFile *q);
 private:
   QXrdFile *q_ptr;
   Q_DECLARE_PUBLIC(QXrdFile)
