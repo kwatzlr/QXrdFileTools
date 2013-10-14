@@ -1,0 +1,6 @@
+*.dylib
+*.so
+moc_*
+Makefile
+*.user
+*.o
