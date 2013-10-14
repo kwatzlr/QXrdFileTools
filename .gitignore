@@ -4,3 +4,4 @@ moc_*
 Makefile
 *.user
 *.o
+*.xcodeproj
