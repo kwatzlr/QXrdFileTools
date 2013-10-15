@@ -14,19 +14,40 @@ public:
   explicit QXrdFile(QObject *parent);
   explicit QXrdFile(const QString &path);
   explicit QXrdFile(QObject *parent, const QString &path);
+  
+  bool atEnd() const;
+  
+  bool open();
+  bool open(QIODevice::OpenMode mode);
+  void close();
+  
+  void setFileName(const QString &path);
+  QString fileName() const;
+  
+  qint64 size() const;
 protected:
+  //! @cond
   QXrdFile(QXrdFilePrivate &d);
   QXrdFile(QObject *parent, QXrdFilePrivate &d);
   QXrdFile(const QString &path, QXrdFilePrivate &d);
   QXrdFile(QObject *parent, const QString &path, QXrdFilePrivate &d);
-  QXrdFilePrivate *d_ptr;
   
+  qint64 readData(char *data, qint64 maxSize);
+  qint64 writeData(const char *data, qint64 maxSize);
+  
+  //! @endcond
 signals:
   
 public slots:
   
 private:
+  Q_PROPERTY(QString filename READ fileName WRITE setFileName);
+  Q_PROPERTY(qint64 position READ pos WRITE seek);
+
+  //! @cond
+  QXrdFilePrivate *d_ptr;
   Q_DECLARE_PRIVATE(QXrdFile)
+  //! @endcond
 };
 
 #endif // QXRDFILE_H
