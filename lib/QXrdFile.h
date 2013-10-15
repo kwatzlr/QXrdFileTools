@@ -42,7 +42,6 @@ public slots:
   
 private:
   Q_PROPERTY(QString filename READ fileName WRITE setFileName);
-  Q_PROPERTY(qint64 position READ pos WRITE seek);
 
   //! @cond
   QXrdFilePrivate *d_ptr;
