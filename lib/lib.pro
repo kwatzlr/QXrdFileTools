@@ -19,3 +19,5 @@ macx {
 }
 
 INCLUDEPATH += $$_XROOTD_DIR/include/xrootd
+
+VERSION = 0.1.0
