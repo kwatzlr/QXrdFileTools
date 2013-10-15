@@ -2,6 +2,11 @@ TARGET = QXrdFileTools
 
 TEMPLATE = lib
 
+SOURCES += QXrdFile.cpp
+
+HEADERS += QXrdFile.h \
+           QXrdFile_p.h
+
 _XROOTD_DIR = $$XROOTD_DIR
 
 isEmpty(_XROOTD_DIR) {
