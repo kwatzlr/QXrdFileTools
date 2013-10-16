@@ -6,6 +6,7 @@ var class_q_xrd_file =
     [ "QXrdFile", "class_q_xrd_file.html#a988eea7957c1d3712646df36b61068a5", null ],
     [ "atEnd", "class_q_xrd_file.html#af89c4e4e1bf3d61aa45ca38bed3145fd", null ],
     [ "close", "class_q_xrd_file.html#a65b0e2aeeb35283d59adcae39f09a84c", null ],
+    [ "exists", "class_q_xrd_file.html#a6e944a4a76d5c1ae4facf39784aab71b", null ],
     [ "fileName", "class_q_xrd_file.html#af655f3299bf4bf6dd0a1d23ef22ba584", null ],
     [ "open", "class_q_xrd_file.html#a9227d101f365f1df1dabc63aac6811e3", null ],
     [ "open", "class_q_xrd_file.html#adc602a68bfd89fa2a5a2be10faef82f9", null ],

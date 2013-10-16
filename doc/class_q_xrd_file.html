@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">QXrdFileTools
-   &#160;<span id="projectnumber">0.1</span>
+   &#160;<span id="projectnumber">0.1.1</span>
    </div>
    <div id="projectbrief">A library for accessing XRootD resources with Qt</div>
   </td>
@@ -105,6 +105,7 @@ $(document).ready(function(){initNavTree('class_q_xrd_file.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#properties">Properties</a> &#124;
 <a href="class_q_xrd_file-members.html">List of all members</a>  </div>
@@ -135,6 +136,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a988eea7957c1d3712646df36b61068a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af89c4e4e1bf3d61aa45ca38bed3145fd"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_q_xrd_file.html#af89c4e4e1bf3d61aa45ca38bed3145fd">atEnd</a> () const </td></tr>
 <tr class="separator:af89c4e4e1bf3d61aa45ca38bed3145fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e944a4a76d5c1ae4facf39784aab71b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_q_xrd_file.html#a6e944a4a76d5c1ae4facf39784aab71b">exists</a> () const </td></tr>
+<tr class="separator:a6e944a4a76d5c1ae4facf39784aab71b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9227d101f365f1df1dabc63aac6811e3"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_q_xrd_file.html#a9227d101f365f1df1dabc63aac6811e3">open</a> ()</td></tr>
 <tr class="separator:a9227d101f365f1df1dabc63aac6811e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc602a68bfd89fa2a5a2be10faef82f9"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_q_xrd_file.html#adc602a68bfd89fa2a5a2be10faef82f9">open</a> (<a class="elRef" doxygen="/Users/jwienken/institut/ams/QXrdFileTools/qt.tag:http://qt-project.org/doc/qt-4.8//" href="http://qt-project.org/doc/qt-4.8/qiodevice.html#OpenMode-typedef">QIODevice::OpenMode</a> <a class="elRef" doxygen="/Users/jwienken/institut/ams/QXrdFileTools/qt.tag:http://qt-project.org/doc/qt-4.8//" href="http://qt-project.org/doc/qt-4.8/qiodevice-qt3.html#mode">mode</a>)</td></tr>
@@ -444,6 +447,11 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="/Users/jwienken/institut/ams/QXrdFileTools/qt.tag:http://qt-project.org/doc/qt-4.8//" href="http://qt-project.org/doc/qt-4.8/qobject-qt3.html#setName">setName</a> (const char *<a class="elRef" doxygen="/Users/jwienken/institut/ams/QXrdFileTools/qt.tag:http://qt-project.org/doc/qt-4.8//" href="http://qt-project.org/doc/qt-4.8/qobject-qt3.html#name">name</a>)</td></tr>
 <tr class="separator:setName inherit pub_methods_qobject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a97ae8036d85fd81bac095716c440bc14"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_q_xrd_file.html#a97ae8036d85fd81bac095716c440bc14">exists</a> (const <a class="elRef" doxygen="/Users/jwienken/institut/ams/QXrdFileTools/qt.tag:http://qt-project.org/doc/qt-4.8//" href="http://qt-project.org/doc/qt-4.8/qstring.html">QString</a> &amp;<a class="el" href="class_q_xrd_file.html#af655f3299bf4bf6dd0a1d23ef22ba584">fileName</a>)</td></tr>
+<tr class="separator:a97ae8036d85fd81bac095716c440bc14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:ac0d1fa60f6bd845a55bb43fcb641eaf2"><td class="memItemLeft" align="right" valign="top">virtual qint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_q_xrd_file.html#ac0d1fa60f6bd845a55bb43fcb641eaf2">readData</a> (char *data, qint64 maxSize)</td></tr>
@@ -503,25 +511,6 @@ Properties</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_static_methods_qobject"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_qobject')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="http://qt-project.org/doc/qt-4.8/qobject.html">QObject</a></td></tr>
-<tr class="memitem:tr inherit pub_static_methods_qobject"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="tr"></a>
-<a class="elRef" doxygen="/Users/jwienken/institut/ams/QXrdFileTools/qt.tag:http://qt-project.org/doc/qt-4.8//" href="http://qt-project.org/doc/qt-4.8/qstring.html">QString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="/Users/jwienken/institut/ams/QXrdFileTools/qt.tag:http://qt-project.org/doc/qt-4.8//" href="http://qt-project.org/doc/qt-4.8/qobject.html#tr">tr</a> (const char *sourceText, const char *disambiguation, int n)</td></tr>
-<tr class="separator:tr inherit pub_static_methods_qobject"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:trUtf8 inherit pub_static_methods_qobject"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="trUtf8"></a>
-<a class="elRef" doxygen="/Users/jwienken/institut/ams/QXrdFileTools/qt.tag:http://qt-project.org/doc/qt-4.8//" href="http://qt-project.org/doc/qt-4.8/qstring.html">QString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="/Users/jwienken/institut/ams/QXrdFileTools/qt.tag:http://qt-project.org/doc/qt-4.8//" href="http://qt-project.org/doc/qt-4.8/qobject.html#trUtf8">trUtf8</a> (const char *sourceText, const char *disambiguation, int n)</td></tr>
-<tr class="separator:trUtf8 inherit pub_static_methods_qobject"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:connect inherit pub_static_methods_qobject"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="connect"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="/Users/jwienken/institut/ams/QXrdFileTools/qt.tag:http://qt-project.org/doc/qt-4.8//" href="http://qt-project.org/doc/qt-4.8/qobject.html#connect">connect</a> (const <a class="elRef" doxygen="/Users/jwienken/institut/ams/QXrdFileTools/qt.tag:http://qt-project.org/doc/qt-4.8//" href="http://qt-project.org/doc/qt-4.8/qobject.html">QObject</a> *<a class="elRef" doxygen="/Users/jwienken/institut/ams/QXrdFileTools/qt.tag:http://qt-project.org/doc/qt-4.8//" href="http://qt-project.org/doc/qt-4.8/qobject.html#sender">sender</a>, const char *signal, const <a class="elRef" doxygen="/Users/jwienken/institut/ams/QXrdFileTools/qt.tag:http://qt-project.org/doc/qt-4.8//" href="http://qt-project.org/doc/qt-4.8/qobject.html">QObject</a> *receiver, const char *method, Qt::ConnectionType type)</td></tr>
-<tr class="separator:connect inherit pub_static_methods_qobject"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:connect-2 inherit pub_static_methods_qobject"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="connect-2"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="/Users/jwienken/institut/ams/QXrdFileTools/qt.tag:http://qt-project.org/doc/qt-4.8//" href="http://qt-project.org/doc/qt-4.8/qobject.html#connect-2">connect</a> (const <a class="elRef" doxygen="/Users/jwienken/institut/ams/QXrdFileTools/qt.tag:http://qt-project.org/doc/qt-4.8//" href="http://qt-project.org/doc/qt-4.8/qobject.html">QObject</a> *<a class="elRef" doxygen="/Users/jwienken/institut/ams/QXrdFileTools/qt.tag:http://qt-project.org/doc/qt-4.8//" href="http://qt-project.org/doc/qt-4.8/qobject.html#sender">sender</a>, const <a class="elRef" doxygen="/Users/jwienken/institut/ams/QXrdFileTools/qt.tag:http://qt-project.org/doc/qt-4.8//" href="http://qt-project.org/doc/qt-4.8/qmetamethod.html">QMetaMethod</a> &amp;signal, const <a class="elRef" doxygen="/Users/jwienken/institut/ams/QXrdFileTools/qt.tag:http://qt-project.org/doc/qt-4.8//" href="http://qt-project.org/doc/qt-4.8/qobject.html">QObject</a> *receiver, const <a class="elRef" doxygen="/Users/jwienken/institut/ams/QXrdFileTools/qt.tag:http://qt-project.org/doc/qt-4.8//" href="http://qt-project.org/doc/qt-4.8/qmetamethod.html">QMetaMethod</a> &amp;method, Qt::ConnectionType type)</td></tr>
-<tr class="separator:connect-2 inherit pub_static_methods_qobject"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:disconnect inherit pub_static_methods_qobject"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="disconnect"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="/Users/jwienken/institut/ams/QXrdFileTools/qt.tag:http://qt-project.org/doc/qt-4.8//" href="http://qt-project.org/doc/qt-4.8/qobject.html#disconnect">disconnect</a> (const <a class="elRef" doxygen="/Users/jwienken/institut/ams/QXrdFileTools/qt.tag:http://qt-project.org/doc/qt-4.8//" href="http://qt-project.org/doc/qt-4.8/qobject.html">QObject</a> *<a class="elRef" doxygen="/Users/jwienken/institut/ams/QXrdFileTools/qt.tag:http://qt-project.org/doc/qt-4.8//" href="http://qt-project.org/doc/qt-4.8/qobject.html#sender">sender</a>, const char *signal, const <a class="elRef" doxygen="/Users/jwienken/institut/ams/QXrdFileTools/qt.tag:http://qt-project.org/doc/qt-4.8//" href="http://qt-project.org/doc/qt-4.8/qobject.html">QObject</a> *receiver, const char *method)</td></tr>
-<tr class="separator:disconnect inherit pub_static_methods_qobject"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:disconnect-2 inherit pub_static_methods_qobject"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="disconnect-2"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="/Users/jwienken/institut/ams/QXrdFileTools/qt.tag:http://qt-project.org/doc/qt-4.8//" href="http://qt-project.org/doc/qt-4.8/qobject.html#disconnect-2">disconnect</a> (const <a class="elRef" doxygen="/Users/jwienken/institut/ams/QXrdFileTools/qt.tag:http://qt-project.org/doc/qt-4.8//" href="http://qt-project.org/doc/qt-4.8/qobject.html">QObject</a> *<a class="elRef" doxygen="/Users/jwienken/institut/ams/QXrdFileTools/qt.tag:http://qt-project.org/doc/qt-4.8//" href="http://qt-project.org/doc/qt-4.8/qobject.html#sender">sender</a>, const <a class="elRef" doxygen="/Users/jwienken/institut/ams/QXrdFileTools/qt.tag:http://qt-project.org/doc/qt-4.8//" href="http://qt-project.org/doc/qt-4.8/qmetamethod.html">QMetaMethod</a> &amp;signal, const <a class="elRef" doxygen="/Users/jwienken/institut/ams/QXrdFileTools/qt.tag:http://qt-project.org/doc/qt-4.8//" href="http://qt-project.org/doc/qt-4.8/qobject.html">QObject</a> *receiver, const <a class="elRef" doxygen="/Users/jwienken/institut/ams/QXrdFileTools/qt.tag:http://qt-project.org/doc/qt-4.8//" href="http://qt-project.org/doc/qt-4.8/qmetamethod.html">QMetaMethod</a> &amp;method)</td></tr>
-<tr class="separator:disconnect-2 inherit pub_static_methods_qobject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_qiodevice"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_qiodevice')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="http://qt-project.org/doc/qt-4.8/qiodevice.html">QIODevice</a></td></tr>
 <tr class="memitem:OpenMode-typedef inherit pub_attribs_qiodevice"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="OpenMode-typedef"></a>
 typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="/Users/jwienken/institut/ams/QXrdFileTools/qt.tag:http://qt-project.org/doc/qt-4.8//" href="http://qt-project.org/doc/qt-4.8/qiodevice.html#OpenMode-typedef">OpenMode</a></td></tr>
@@ -563,7 +552,7 @@ typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxy
 </div><div class="memdoc">
 <p>Constructs a new file object. </p>
 
-<p>Definition at line <a class="el" href="_q_xrd_file_8cpp_source.html#l00013">13</a> of file <a class="el" href="_q_xrd_file_8cpp_source.html">QXrdFile.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_q_xrd_file_8cpp_source.html#l00015">15</a> of file <a class="el" href="_q_xrd_file_8cpp_source.html">QXrdFile.cpp</a>.</p>
 
 </div>
 </div>
@@ -590,7 +579,7 @@ typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxy
 </div><div class="memdoc">
 <p>Constructs a new file object with the given parent. </p>
 
-<p>Definition at line <a class="el" href="_q_xrd_file_8cpp_source.html#l00028">28</a> of file <a class="el" href="_q_xrd_file_8cpp_source.html">QXrdFile.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_q_xrd_file_8cpp_source.html#l00030">30</a> of file <a class="el" href="_q_xrd_file_8cpp_source.html">QXrdFile.cpp</a>.</p>
 
 </div>
 </div>
@@ -617,7 +606,7 @@ typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxy
 </div><div class="memdoc">
 <p>Constructs a new file object to represent the file with the given path. </p>
 
-<p>Definition at line <a class="el" href="_q_xrd_file_8cpp_source.html#l00020">20</a> of file <a class="el" href="_q_xrd_file_8cpp_source.html">QXrdFile.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_q_xrd_file_8cpp_source.html#l00022">22</a> of file <a class="el" href="_q_xrd_file_8cpp_source.html">QXrdFile.cpp</a>.</p>
 
 </div>
 </div>
@@ -654,7 +643,7 @@ typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxy
 </div><div class="memdoc">
 <p>Constructs a new file object with the given parent to represent the file with the specified path. </p>
 
-<p>Definition at line <a class="el" href="_q_xrd_file_8cpp_source.html#l00036">36</a> of file <a class="el" href="_q_xrd_file_8cpp_source.html">QXrdFile.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_q_xrd_file_8cpp_source.html#l00038">38</a> of file <a class="el" href="_q_xrd_file_8cpp_source.html">QXrdFile.cpp</a>.</p>
 
 </div>
 </div>
@@ -683,7 +672,7 @@ typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxy
 
 <p>Reimplemented from <a class="elRef" doxygen="/Users/jwienken/institut/ams/QXrdFileTools/qt.tag:http://qt-project.org/doc/qt-4.8//" href="http://qt-project.org/doc/qt-4.8/qiodevice.html#atEnd">QIODevice</a>.</p>
 
-<p>Definition at line <a class="el" href="_q_xrd_file_8cpp_source.html#l00138">138</a> of file <a class="el" href="_q_xrd_file_8cpp_source.html">QXrdFile.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_q_xrd_file_8cpp_source.html#l00140">140</a> of file <a class="el" href="_q_xrd_file_8cpp_source.html">QXrdFile.cpp</a>.</p>
 
 </div>
 </div>
@@ -712,7 +701,54 @@ typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxy
 
 <p>Reimplemented from <a class="elRef" doxygen="/Users/jwienken/institut/ams/QXrdFileTools/qt.tag:http://qt-project.org/doc/qt-4.8//" href="http://qt-project.org/doc/qt-4.8/qiodevice.html#close">QIODevice</a>.</p>
 
-<p>Definition at line <a class="el" href="_q_xrd_file_8cpp_source.html#l00151">151</a> of file <a class="el" href="_q_xrd_file_8cpp_source.html">QXrdFile.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_q_xrd_file_8cpp_source.html#l00153">153</a> of file <a class="el" href="_q_xrd_file_8cpp_source.html">QXrdFile.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a97ae8036d85fd81bac095716c440bc14"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool QXrdFile::exists </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="elRef" doxygen="/Users/jwienken/institut/ams/QXrdFileTools/qt.tag:http://qt-project.org/doc/qt-4.8//" href="http://qt-project.org/doc/qt-4.8/qstring.html">QString</a> &amp;&#160;</td>
+          <td class="paramname"><em>fileName</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns true if the file specified by fileName exists; otherwise returns false. </p>
+
+<p>Definition at line <a class="el" href="_q_xrd_file_8cpp_source.html#l00173">173</a> of file <a class="el" href="_q_xrd_file_8cpp_source.html">QXrdFile.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6e944a4a76d5c1ae4facf39784aab71b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool QXrdFile::exists </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This is an overloaded function.</p>
+<p>Returns true if the file specified by <a class="el" href="class_q_xrd_file.html#af655f3299bf4bf6dd0a1d23ef22ba584">fileName()</a> exists; otherwise returns false. </p>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="class_q_xrd_file.html#af655f3299bf4bf6dd0a1d23ef22ba584">fileName()</a>, <a class="el" href="class_q_xrd_file.html#ab09b55d380ca903b00931fd881c5f20c">setFileName()</a> and <a class="elRef" doxygen="/Users/jwienken/institut/ams/QXrdFileTools/qt.tag:http://qt-project.org/doc/qt-4.8//" href="http://qt-project.org/doc/qt-4.8/qfile.html#exists-2">QFile::exists()</a> </dd></dl>
+
+<p>Definition at line <a class="el" href="_q_xrd_file_8cpp_source.html#l00165">165</a> of file <a class="el" href="_q_xrd_file_8cpp_source.html">QXrdFile.cpp</a>.</p>
 
 </div>
 </div>
@@ -731,7 +767,7 @@ typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxy
 <p>Returns the name set by <a class="el" href="class_q_xrd_file.html#ab09b55d380ca903b00931fd881c5f20c">setFileName()</a> or to the <a class="el" href="class_q_xrd_file.html">QXrdFile</a> constructors.</p>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="class_q_xrd_file.html#ab09b55d380ca903b00931fd881c5f20c">setFileName()</a>, <a class="elRef" doxygen="/Users/jwienken/institut/ams/QXrdFileTools/qt.tag:http://qt-project.org/doc/qt-4.8//" href="http://qt-project.org/doc/qt-4.8/qfile.html#fileName">QFile::fileName()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="_q_xrd_file_8cpp_source.html#l00109">109</a> of file <a class="el" href="_q_xrd_file_8cpp_source.html">QXrdFile.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_q_xrd_file_8cpp_source.html#l00111">111</a> of file <a class="el" href="_q_xrd_file_8cpp_source.html">QXrdFile.cpp</a>.</p>
 
 </div>
 </div>
@@ -757,7 +793,7 @@ typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxy
 </div><div class="memdoc">
 <p>Opens the file previously set using OpenMode QIODevice::ReadOnly, returning true if successful; otherwise false; </p>
 
-<p>Definition at line <a class="el" href="_q_xrd_file_8cpp_source.html#l00099">99</a> of file <a class="el" href="_q_xrd_file_8cpp_source.html">QXrdFile.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_q_xrd_file_8cpp_source.html#l00101">101</a> of file <a class="el" href="_q_xrd_file_8cpp_source.html">QXrdFile.cpp</a>.</p>
 
 </div>
 </div>
@@ -786,7 +822,7 @@ typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxy
 <p>Opens the file previously setusing OpenMode mode, returning true if successful; otherwise false.</p>
 <p>Currently only QIODevice::ReadOnly is supported. </p>
 
-<p>Definition at line <a class="el" href="_q_xrd_file_8cpp_source.html#l00089">89</a> of file <a class="el" href="_q_xrd_file_8cpp_source.html">QXrdFile.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_q_xrd_file_8cpp_source.html#l00091">91</a> of file <a class="el" href="_q_xrd_file_8cpp_source.html">QXrdFile.cpp</a>.</p>
 
 </div>
 </div>
@@ -823,7 +859,7 @@ typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxy
 </div><div class="memdoc">
 <p>Reimplemented from <a class="elRef" doxygen="/Users/jwienken/institut/ams/QXrdFileTools/qt.tag:http://qt-project.org/doc/qt-4.8//" href="http://qt-project.org/doc/qt-4.8/qiodevice.html#readData">QIODevice::readData()</a>. </p>
 
-<p>Definition at line <a class="el" href="_q_xrd_file_8cpp_source.html#l00065">65</a> of file <a class="el" href="_q_xrd_file_8cpp_source.html">QXrdFile.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_q_xrd_file_8cpp_source.html#l00067">67</a> of file <a class="el" href="_q_xrd_file_8cpp_source.html">QXrdFile.cpp</a>.</p>
 
 </div>
 </div>
@@ -844,7 +880,7 @@ typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxy
 <p>If this function is called when a file is already opened, this file is closed and the new file is open.</p>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="class_q_xrd_file.html#af655f3299bf4bf6dd0a1d23ef22ba584">fileName()</a>, <a class="elRef" doxygen="/Users/jwienken/institut/ams/QXrdFileTools/qt.tag:http://qt-project.org/doc/qt-4.8//" href="http://qt-project.org/doc/qt-4.8/qfile.html#setFileName">QFile::setFileName()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="_q_xrd_file_8cpp_source.html#l00123">123</a> of file <a class="el" href="_q_xrd_file_8cpp_source.html">QXrdFile.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_q_xrd_file_8cpp_source.html#l00125">125</a> of file <a class="el" href="_q_xrd_file_8cpp_source.html">QXrdFile.cpp</a>.</p>
 
 </div>
 </div>
@@ -872,7 +908,7 @@ typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxy
 
 <p>Reimplemented from <a class="elRef" doxygen="/Users/jwienken/institut/ams/QXrdFileTools/qt.tag:http://qt-project.org/doc/qt-4.8//" href="http://qt-project.org/doc/qt-4.8/qiodevice.html#size">QIODevice</a>.</p>
 
-<p>Definition at line <a class="el" href="_q_xrd_file_8cpp_source.html#l00130">130</a> of file <a class="el" href="_q_xrd_file_8cpp_source.html">QXrdFile.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_q_xrd_file_8cpp_source.html#l00132">132</a> of file <a class="el" href="_q_xrd_file_8cpp_source.html">QXrdFile.cpp</a>.</p>
 
 </div>
 </div>
@@ -910,7 +946,7 @@ typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxy
 <p>Reimplemented from <a class="elRef" doxygen="/Users/jwienken/institut/ams/QXrdFileTools/qt.tag:http://qt-project.org/doc/qt-4.8//" href="http://qt-project.org/doc/qt-4.8/qiodevice.html#writeData">QIODevice::writeData()</a>.</p>
 <p>Dummy implementation, always returns false. </p>
 
-<p>Definition at line <a class="el" href="_q_xrd_file_8cpp_source.html#l00075">75</a> of file <a class="el" href="_q_xrd_file_8cpp_source.html">QXrdFile.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_q_xrd_file_8cpp_source.html#l00077">77</a> of file <a class="el" href="_q_xrd_file_8cpp_source.html">QXrdFile.cpp</a>.</p>
 
 </div>
 </div>
@@ -920,7 +956,7 @@ typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxy
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_q_xrd_file.html">QXrdFile</a></li>
-    <li class="footer">Generated on Tue Oct 15 2013 20:12:44 for QXrdFileTools by
+    <li class="footer">Generated on Wed Oct 16 2013 16:34:55 for QXrdFileTools by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
   </ul>

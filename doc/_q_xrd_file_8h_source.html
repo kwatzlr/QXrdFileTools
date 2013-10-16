@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">QXrdFileTools
-   &#160;<span id="projectnumber">0.1</span>
+   &#160;<span id="projectnumber">0.1.1</span>
    </div>
    <div id="projectbrief">A library for accessing XRootD resources with Qt</div>
   </td>
@@ -118,46 +118,49 @@ $(document).ready(function(){initNavTree('_q_xrd_file_8h_source.html','');});
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_q_xrd_file.html#af89c4e4e1bf3d61aa45ca38bed3145fd">atEnd</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_q_xrd_file.html#a9227d101f365f1df1dabc63aac6811e3">open</a>();</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_q_xrd_file.html#adc602a68bfd89fa2a5a2be10faef82f9">open</a>(QIODevice::OpenMode mode);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_q_xrd_file.html#a65b0e2aeeb35283d59adcae39f09a84c">close</a>();</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_q_xrd_file.html#ab09b55d380ca903b00931fd881c5f20c">setFileName</a>(<span class="keyword">const</span> QString &amp;path);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <a class="code" href="class_q_xrd_file.html#af655f3299bf4bf6dd0a1d23ef22ba584">QString</a> <a class="code" href="class_q_xrd_file.html#af655f3299bf4bf6dd0a1d23ef22ba584">fileName</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_q_xrd_file.html#a97ae8036d85fd81bac095716c440bc14">exists</a>(<span class="keyword">const</span> QString &amp;fileName);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="class_q_xrd_file.html#a6e944a4a76d5c1ae4facf39784aab71b">exists</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_q_xrd_file.html#a9227d101f365f1df1dabc63aac6811e3">open</a>();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_q_xrd_file.html#adc602a68bfd89fa2a5a2be10faef82f9">open</a>(QIODevice::OpenMode mode);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_q_xrd_file.html#a65b0e2aeeb35283d59adcae39f09a84c">close</a>();</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <a class="code" href="class_q_xrd_file.html#ad220116739ac8183d1ae1c6ae3888eb9">qint64</a> <a class="code" href="class_q_xrd_file.html#ad220116739ac8183d1ae1c6ae3888eb9">size</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="comment">//! @cond</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  QXrdFile(QXrdFilePrivate &amp;d);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  QXrdFile(QObject *parent, QXrdFilePrivate &amp;d);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  QXrdFile(<span class="keyword">const</span> QString &amp;path, QXrdFilePrivate &amp;d);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  QXrdFile(QObject *parent, <span class="keyword">const</span> QString &amp;path, QXrdFilePrivate &amp;d);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="comment">//! @endcond</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="class_q_xrd_file.html#ac0d1fa60f6bd845a55bb43fcb641eaf2">qint64</a> <a class="code" href="class_q_xrd_file.html#ac0d1fa60f6bd845a55bb43fcb641eaf2">readData</a>(<span class="keywordtype">char</span> *<a class="code" href="class_q_xrd_file.html#ac0d1fa60f6bd845a55bb43fcb641eaf2">data</a>, <a class="code" href="class_q_xrd_file.html#ac0d1fa60f6bd845a55bb43fcb641eaf2">qint64</a> <a class="code" href="class_q_xrd_file.html#ac0d1fa60f6bd845a55bb43fcb641eaf2">maxSize</a>);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="class_q_xrd_file.html#a7e55583c338162992c4332ed5fba63d3">qint64</a> <a class="code" href="class_q_xrd_file.html#a7e55583c338162992c4332ed5fba63d3">writeData</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code" href="class_q_xrd_file.html#a7e55583c338162992c4332ed5fba63d3">data</a>, <a class="code" href="class_q_xrd_file.html#a7e55583c338162992c4332ed5fba63d3">qint64</a> <a class="code" href="class_q_xrd_file.html#a7e55583c338162992c4332ed5fba63d3">maxSize</a>);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_q_xrd_file.html#ab09b55d380ca903b00931fd881c5f20c">setFileName</a>(<span class="keyword">const</span> QString &amp;path);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <a class="code" href="class_q_xrd_file.html#af655f3299bf4bf6dd0a1d23ef22ba584">QString</a> <a class="code" href="class_q_xrd_file.html#af655f3299bf4bf6dd0a1d23ef22ba584">fileName</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <a class="code" href="class_q_xrd_file.html#ad220116739ac8183d1ae1c6ae3888eb9">qint64</a> <a class="code" href="class_q_xrd_file.html#ad220116739ac8183d1ae1c6ae3888eb9">size</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="comment">//! @cond</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  QXrdFile(QXrdFilePrivate &amp;d);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  QXrdFile(QObject *parent, QXrdFilePrivate &amp;d);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  QXrdFile(<span class="keyword">const</span> QString &amp;path, QXrdFilePrivate &amp;d);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  QXrdFile(QObject *parent, <span class="keyword">const</span> QString &amp;path, QXrdFilePrivate &amp;d);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="comment">//! @endcond</span></div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;signals:</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">public</span> <a class="code" href="class_q_xrd_file.html#a7d528e2fb033f5d0d96a0835815e9665">slots</a>:</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <a class="code" href="class_q_xrd_file.html#a7d528e2fb033f5d0d96a0835815e9665">Q_PROPERTY</a>(<a class="code" href="class_q_xrd_file.html#a7d528e2fb033f5d0d96a0835815e9665">QString</a> <a class="code" href="class_q_xrd_file.html#a7d528e2fb033f5d0d96a0835815e9665">filename</a> <a class="code" href="class_q_xrd_file.html#a7d528e2fb033f5d0d96a0835815e9665">READ</a> <a class="code" href="class_q_xrd_file.html#a7d528e2fb033f5d0d96a0835815e9665">fileName</a> <a class="code" href="class_q_xrd_file.html#a7d528e2fb033f5d0d96a0835815e9665">WRITE</a> <a class="code" href="class_q_xrd_file.html#a7d528e2fb033f5d0d96a0835815e9665">setFileName</a>);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="class_q_xrd_file.html#ac0d1fa60f6bd845a55bb43fcb641eaf2">qint64</a> <a class="code" href="class_q_xrd_file.html#ac0d1fa60f6bd845a55bb43fcb641eaf2">readData</a>(<span class="keywordtype">char</span> *<a class="code" href="class_q_xrd_file.html#ac0d1fa60f6bd845a55bb43fcb641eaf2">data</a>, <a class="code" href="class_q_xrd_file.html#ac0d1fa60f6bd845a55bb43fcb641eaf2">qint64</a> <a class="code" href="class_q_xrd_file.html#ac0d1fa60f6bd845a55bb43fcb641eaf2">maxSize</a>);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="class_q_xrd_file.html#a7e55583c338162992c4332ed5fba63d3">qint64</a> <a class="code" href="class_q_xrd_file.html#a7e55583c338162992c4332ed5fba63d3">writeData</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code" href="class_q_xrd_file.html#a7e55583c338162992c4332ed5fba63d3">data</a>, <a class="code" href="class_q_xrd_file.html#a7e55583c338162992c4332ed5fba63d3">qint64</a> <a class="code" href="class_q_xrd_file.html#a7e55583c338162992c4332ed5fba63d3">maxSize</a>);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;signals:</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">public</span> <a class="code" href="class_q_xrd_file.html#a7d528e2fb033f5d0d96a0835815e9665">slots</a>:</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="comment">//! @cond</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  QXrdFilePrivate *d_ptr;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <a class="code" href="class_q_xrd_file.html#a7d528e2fb033f5d0d96a0835815e9665">Q_DECLARE_PRIVATE</a>(<a class="code" href="class_q_xrd_file.html#a7d528e2fb033f5d0d96a0835815e9665">QXrdFile</a>)</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="comment">//! @endcond</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;};</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">// QXRDFILE_H</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <a class="code" href="class_q_xrd_file.html#a7d528e2fb033f5d0d96a0835815e9665">Q_PROPERTY</a>(<a class="code" href="class_q_xrd_file.html#a7d528e2fb033f5d0d96a0835815e9665">QString</a> <a class="code" href="class_q_xrd_file.html#a7d528e2fb033f5d0d96a0835815e9665">filename</a> <a class="code" href="class_q_xrd_file.html#a7d528e2fb033f5d0d96a0835815e9665">READ</a> <a class="code" href="class_q_xrd_file.html#a7d528e2fb033f5d0d96a0835815e9665">fileName</a> <a class="code" href="class_q_xrd_file.html#a7d528e2fb033f5d0d96a0835815e9665">WRITE</a> <a class="code" href="class_q_xrd_file.html#a7d528e2fb033f5d0d96a0835815e9665">setFileName</a>);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="comment">//! @cond</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  QXrdFilePrivate *d_ptr;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <a class="code" href="class_q_xrd_file.html#a7d528e2fb033f5d0d96a0835815e9665">Q_DECLARE_PRIVATE</a>(<a class="code" href="class_q_xrd_file.html#a7d528e2fb033f5d0d96a0835815e9665">QXrdFile</a>)</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="comment">//! @endcond</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;};</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">// QXRDFILE_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li><li class="navelem"><b>QXrdFile.h</b></li>
-    <li class="footer">Generated on Tue Oct 15 2013 20:12:44 for QXrdFileTools by
+    <li class="footer">Generated on Wed Oct 16 2013 16:34:55 for QXrdFileTools by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
   </ul>
