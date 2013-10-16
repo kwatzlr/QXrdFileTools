@@ -1,4 +1,6 @@
 #include "QXrdFile_p.h"
+#include <XrdClient/XrdClientAdmin.hh>
+#include <QStringList>
 
 //////////////// QXrdFile ////////////////
 #ifdef Q_WS_MAC
@@ -160,6 +162,24 @@ void QXrdFile::close() {
   QIODevice::close();
 }
 
+/**
+ * This is an overloaded function.
+ *
+ * Returns true if the file specified by fileName() exists; otherwise returns false.
+ * \sa fileName(), setFileName() and QFile::exists()
+ */
+bool QXrdFile::exists() const {
+  Q_D(const QXrdFile);
+  return d->exists();
+}
+
+/**
+ * Returns true if the file specified by fileName exists; otherwise returns false.
+ */
+bool QXrdFile::exists(const QString &fileName) {
+  QXrdFile file(fileName);
+  return file.exists();
+}
 
 //////////////// QXrdFilePrivate ////////////////
 #ifdef Q_WS_MAC
@@ -212,4 +232,16 @@ void QXrdFilePrivate::close() {
     delete _client;
     _client = 0;
   }
+}
+
+bool QXrdFilePrivate::exists() const {
+  XrdClientAdmin admin(qPrintable(this->_fileName.left(this->_fileName.lastIndexOf("/"))));
+  if (!admin.Connect())
+    return false;
+  vecBool vb;
+  vecString vs;
+  XrdOucString name(qPrintable(this->_fileName.split("//").last().prepend("/")));
+  vs.Push_back(name);
+  admin.ExistFiles(vs, vb);
+  return vb.At(0);
 }

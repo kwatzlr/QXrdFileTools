@@ -20,6 +20,9 @@ public:
   bool open();
   bool open(QIODevice::OpenMode mode);
   void close();
+  static bool exists(const QString &fileName);
+  bool exists() const;
+  
   
   void setFileName(const QString &path);
   QString fileName() const;
