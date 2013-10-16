@@ -208,7 +208,6 @@ qint64 QXrdFilePrivate::readData(char *data, qint64 maxSize) {
 void QXrdFilePrivate::setFileName(const QString& path) {
   this->close();
   this->_fileName = path;
-  this->open();
 }
 
 qint64 QXrdFilePrivate::size() const {
