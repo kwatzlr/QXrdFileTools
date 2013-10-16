@@ -4,7 +4,7 @@
 #---------------------------------------------------------------------------
 DOXYFILE_ENCODING      = UTF-8
 PROJECT_NAME           = QXrdFileTools
-PROJECT_NUMBER         = 1.0
+PROJECT_NUMBER         = 0.1.1
 PROJECT_BRIEF          = "A library for accessing XRootD resources with Qt"
 PROJECT_LOGO           = 
 OUTPUT_DIRECTORY       = /Users/jwienken/institut/ams/QXrdFileTools/
@@ -28,9 +28,9 @@ INLINE_INHERITED_MEMB  = NO
 FULL_PATH_NAMES        = YES
 STRIP_FROM_PATH        = 
 STRIP_FROM_INC_PATH    = 
-SHORT_NAMES            = YES
+SHORT_NAMES            = NO
 JAVADOC_AUTOBRIEF      = NO
-QT_AUTOBRIEF           = NO
+QT_AUTOBRIEF           = YES
 MULTILINE_CPP_IS_BRIEF = NO
 INHERIT_DOCS           = YES
 SEPARATE_MEMBER_PAGES  = NO

@@ -30,6 +30,8 @@ public:
   void setFileName(const QString& path);
   
   qint64 size() const;
+  
+  bool exists() const;
 private:
   QString _fileName;
   

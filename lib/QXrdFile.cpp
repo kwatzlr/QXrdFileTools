@@ -1,4 +1,6 @@
 #include "QXrdFile_p.h"
+#include <XrdClient/XrdClientAdmin.hh>
+#include <QStringList>
 
 //////////////// QXrdFile ////////////////
 #ifdef Q_WS_MAC
@@ -104,7 +106,7 @@ bool QXrdFile::open() {
 /**
  * Returns the name set by setFileName() or to the QXrdFile constructors.
  * 
- * \sa setFileName()
+ * \sa setFileName(), QFile::fileName()
  */
 QString QXrdFile::fileName() const {
   Q_D(const QXrdFile);
@@ -113,20 +115,18 @@ QString QXrdFile::fileName() const {
 
 /**
  * Sets the name of the file. The name must be a full xrootd URL (including protocol, 
- * host and path.
+ * host and path).
  * 
  * If this function is called when a file is already opened, this file is closed and
  * the new file is open.
  *
- * \sa fileName()
+ * \sa fileName(), QFile::setFileName()
  */
 void QXrdFile::setFileName(const QString& path) {
   Q_D(QXrdFile);
   d->setFileName(path);
 }
 /**
- * Reimplemented from QIODevice::size().
- * 
  * Returns the size of the file.
  */
 qint64 QXrdFile::size() const {
@@ -135,8 +135,6 @@ qint64 QXrdFile::size() const {
 }
 
 /**
- * Reimplemented from QIODevice::atEnd().
- * 
  * Returns true if the end of the file has been reached; otherwise returns false.
  */
 bool QXrdFile::atEnd() const {
@@ -148,9 +146,7 @@ bool QXrdFile::atEnd() const {
 }
 
 /** 
- * Reimplemented from QIODevice::close().
- *
- * Closes the file.
+ *  Closes the file.
  *
  * \sa QIODevice::close()
  */
@@ -160,6 +156,24 @@ void QXrdFile::close() {
   QIODevice::close();
 }
 
+/**
+ * This is an overloaded function.
+ *
+ * Returns true if the file specified by fileName() exists; otherwise returns false.
+ * \sa fileName(), setFileName() and QFile::exists()
+ */
+bool QXrdFile::exists() const {
+  Q_D(const QXrdFile);
+  return d->exists();
+}
+
+/**
+ * Returns true if the file specified by fileName exists; otherwise returns false.
+ */
+bool QXrdFile::exists(const QString &fileName) {
+  QXrdFile file(fileName);
+  return file.exists();
+}
 
 //////////////// QXrdFilePrivate ////////////////
 #ifdef Q_WS_MAC
@@ -194,7 +208,6 @@ qint64 QXrdFilePrivate::readData(char *data, qint64 maxSize) {
 void QXrdFilePrivate::setFileName(const QString& path) {
   this->close();
   this->_fileName = path;
-  this->open();
 }
 
 qint64 QXrdFilePrivate::size() const {
@@ -212,4 +225,16 @@ void QXrdFilePrivate::close() {
     delete _client;
     _client = 0;
   }
+}
+
+bool QXrdFilePrivate::exists() const {
+  XrdClientAdmin admin(qPrintable(this->_fileName.left(this->_fileName.lastIndexOf("/"))));
+  if (!admin.Connect())
+    return false;
+  vecBool vb;
+  vecString vs;
+  XrdOucString name(qPrintable(this->_fileName.split("//").last().prepend("/")));
+  vs.Push_back(name);
+  admin.ExistFiles(vs, vb);
+  return vb.At(0);
 }

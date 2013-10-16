@@ -15,11 +15,14 @@ public:
   explicit QXrdFile(const QString &path);
   explicit QXrdFile(QObject *parent, const QString &path);
   
-  bool atEnd() const;
+  virtual bool atEnd() const;
   
-  bool open();
-  bool open(QIODevice::OpenMode mode);
-  void close();
+  static bool exists(const QString &fileName);
+  bool exists() const;
+  
+  virtual bool open();
+  virtual bool open(QIODevice::OpenMode mode);
+  virtual void close();
   
   void setFileName(const QString &path);
   QString fileName() const;
@@ -31,11 +34,11 @@ protected:
   QXrdFile(QObject *parent, QXrdFilePrivate &d);
   QXrdFile(const QString &path, QXrdFilePrivate &d);
   QXrdFile(QObject *parent, const QString &path, QXrdFilePrivate &d);
-  
-  qint64 readData(char *data, qint64 maxSize);
-  qint64 writeData(const char *data, qint64 maxSize);
-  
   //! @endcond
+  
+  virtual qint64 readData(char *data, qint64 maxSize);
+  virtual qint64 writeData(const char *data, qint64 maxSize);
+
 signals:
   
 public slots:
