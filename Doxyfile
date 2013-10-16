@@ -4,7 +4,7 @@
 #---------------------------------------------------------------------------
 DOXYFILE_ENCODING      = UTF-8
 PROJECT_NAME           = QXrdFileTools
-PROJECT_NUMBER         = 0.1
+PROJECT_NUMBER         = 0.1.1
 PROJECT_BRIEF          = "A library for accessing XRootD resources with Qt"
 PROJECT_LOGO           = 
 OUTPUT_DIRECTORY       = /Users/jwienken/institut/ams/QXrdFileTools/
