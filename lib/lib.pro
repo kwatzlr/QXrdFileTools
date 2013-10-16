@@ -15,7 +15,7 @@ isEmpty(_XROOTD_DIR) {
 message("XROOTD_DIR = $$_XROOTD_DIR")
 
 macx {
-  LIBS += -L$$_XROOTD_DIR/lib -lXrdClient
+  LIBS += -L$$_XROOTD_DIR/lib -lXrdClient -lXrdUtils
 }
 
 INCLUDEPATH += $$_XROOTD_DIR/include/xrootd
