@@ -7,3 +7,5 @@ Makefile
 html/*
 *.tmp
 *.xcodeproj
+*.save
+/*build*/
