@@ -8,7 +8,6 @@ class QXrdFilePrivate;
 
 class QXrdFile : public QIODevice
 {
-  Q_OBJECT
 public:
   explicit QXrdFile();
   explicit QXrdFile(QObject *parent);
@@ -39,10 +38,6 @@ protected:
   virtual qint64 readData(char *data, qint64 maxSize);
   virtual qint64 writeData(const char *data, qint64 maxSize);
 
-signals:
-  
-public slots:
-  
 private:
   Q_PROPERTY(QString filename READ fileName WRITE setFileName);
 
