@@ -1,0 +1,12 @@
+# - Config file for the QXrdFileTools package
+# It defines the following variables
+#  QXRDFILETOOLS_FOUND            - set to true if everything is found
+#  QXRDFILETOOLS_INCLUDE_DIRS     - include directories for QXrdFileTools
+#  QXRDFILETOOLS_LIBRARIES        - libraries to link against
+#  QXRDFILETOOLS_BASEDIR          - source installation path 
+
+set(QXRDFILETOOLS_FOUND 1)
+
+set(QXRDFILETOOLS_INCLUDE_DIRS @PROJECT_SOURCE_DIR@/lib)
+set(QXRDFILETOOLS_LIBRARIES -L@CMAKE_LIBRARY_OUTPUT_DIRECTORY@ -lQXrdFileTools)
+set(QXRDFILETOOLS_BASEDIR @PROJECT_SOURCE_DIR@)
